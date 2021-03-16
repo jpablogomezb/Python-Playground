@@ -4,7 +4,7 @@ import shutil
 
 def download_file(url, directory, fname=None):
     if fname == None:
-        fname = dl_filename = os.path.basename(url)
+        fname = os.path.basename(url)
     dl_path = os.path.join(directory, fname)
     with requests.get(url, stream=True) as r:
         with open(dl_path, 'wb') as file_obj:
