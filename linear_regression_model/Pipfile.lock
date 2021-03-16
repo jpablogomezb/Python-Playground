@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "bcc6ca489578996c2f6566dc0311ae4af3d87d3fab4c4a3a3cc9e0a2d51c5896"
+            "sha256": "2a1e9e78beaf1561e97909548eeb0484d8bea9a5cc6f1381d7a1c5095e8f2c29"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -28,7 +28,7 @@
                 "sha256:93aa393e9d6c54c5cd570ccadd8edad61ea0c4b9ea7a01409020c9aa019eb442",
                 "sha256:dd83cd4b5b460958838f6eb3000c660b1f9caf2a5b1de4264e941512f603258a"
             ],
-            "markers": "platform_system == 'Darwin'",
+            "markers": "sys_platform == 'darwin'",
             "version": "==0.1.2"
         },
         "argon2-cffi": {
@@ -255,10 +255,10 @@
         },
         "jupyter-console": {
             "hashes": [
-                "sha256:1d80c06b2d85bfb10bd5cc731b3db18e9023bc81ab00491d3ac31f206490aee3",
-                "sha256:7f6194f4f4692d292da3f501c7f343ccd5e36c6a1becf7b7515e23e66d6bf1e9"
+                "sha256:092283ba2c9b5ceb53f32d95891ecc59ed4bfeb69e36fe017db176213daa5b0e",
+                "sha256:947f66bbdeee2221b4fb3a6b78225d337b8f10832f14cecf7932183635abe1d9"
             ],
-            "version": "==6.2.0"
+            "version": "==6.3.0"
         },
         "jupyter-core": {
             "hashes": [
@@ -719,10 +719,10 @@
         },
         "qtconsole": {
             "hashes": [
-                "sha256:0173486b9cd69e17df537fb4f1e0d62a88019f6661700a11fd7236fa89ed900b",
-                "sha256:404994edfe33c201d6bd0c4bd501b00c16125071573c938533224992bea0b30f"
+                "sha256:4a38053993ca2da058f76f8d75b3d8906efbf9183de516f92f222ac8e37d9614",
+                "sha256:c091a35607d2a2432e004c4a112d241ce908086570cf68594176dd52ccaa212d"
             ],
-            "version": "==5.0.2"
+            "version": "==5.0.3"
         },
         "qtpy": {
             "hashes": [
@@ -761,6 +761,14 @@
                 "sha256:f46dd15335e8a320b0fb4685f58b7471702234cba8bb3442b69a3e1dc329c345"
             ],
             "version": "==1.6.1"
+        },
+        "seaborn": {
+            "hashes": [
+                "sha256:44e78eaed937c5a87fc7a892c329a7cc091060b67ebd1d0d306b446a74ba01ad",
+                "sha256:4e1cce9489449a1c6ff3c567f2113cdb41122f727e27a984950d004a88ef3c5c"
+            ],
+            "index": "pypi",
+            "version": "==0.11.1"
         },
         "send2trash": {
             "hashes": [

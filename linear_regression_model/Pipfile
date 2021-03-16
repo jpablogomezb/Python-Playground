@@ -12,6 +12,7 @@ jupyterlab = "*"
 notebook = "*"
 statsmodels = "*"
 matplotlib = "*"
+seaborn = "*"
 
 [requires]
 python_version = "3.8"

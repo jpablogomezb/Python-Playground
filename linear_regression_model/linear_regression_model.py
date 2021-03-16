@@ -1,10 +1,7 @@
 import os
 import datetime
-#import math
 import pandas as pd
 import numpy as np
-#import itertools
-#from itertools import chain, combinations
 import statsmodels.formula.api as smf
 #import scipy.stats as scipystats
 import statsmodels.api as sm
@@ -20,10 +17,15 @@ FIGURES_DIR = os.path.join(BASE_DIR, "figures")
 timestamp = datetime.datetime.now()
 
 data = os.path.join(DATA_DIR, 'data_file.csv')
+print('Generating regression statistics...')
+#pandas
 df = pd.read_csv(data)
 #print(df.describe())
 #print(df.iloc[:, 0])
 #print(df.head(n=10))
+#df.dropna(axis = 0, how = 'any') # To drop rows with any empty cells
+#df.drop_duplicates()
+
 
 '''
 Simple Linear Regression Model (with numeric variables) - using statsmodels module.
@@ -33,6 +35,7 @@ lrm = sm.OLS.from_formula(formula= "{} ~ {}".format(df.columns[0], df.columns[1]
 
 #figure with scatterplot
 lrm_plot = plt
+lrm_plot.style.use('ggplot')
 lrm_plot.rcParams['figure.figsize'] = (10, 6)
 lrm_plot.scatter(df.iloc[:, 1], df.iloc[:, 0], c = 'g')
 lrm_plot.plot(df.iloc[:, 1], lrm.params[0] + lrm.params[1] * df.iloc[:, 1])
@@ -73,3 +76,5 @@ to_save_mul = os.path.join(FIGURES_DIR, fname_mul)
 lrm_fig.savefig(to_save_mul)
 #lrm_fig.show()
 mul_lrm_fig.close()
+
+print('Results correctly saved in the figures folder')
