@@ -11,7 +11,6 @@ def download_file(url, directory, fname=None):
             shutil.copyfileobj(r.raw, file_obj)
     return dl_path
 
-
 def download_file_sl(url):
     local_filename = url.split('/')[-1]
     with requests.get(url, stream=True) as r:

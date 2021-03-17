@@ -17,7 +17,7 @@ r.raise_for_status()
 with open(downloaded_img_path, 'wb') as f:
     f.write(r.content)
 
-# dl_filename = dl_filename = os.path.basename(url)
+# dl_filename = os.path.basename(url)
 # new_dl_path = os.path.join(DOWNLOADS_DIR, dl_filename)
 # # for bigger size items, connection is not close
 # with requests.get(url, stream=True) as r:
