@@ -2,12 +2,8 @@ import os
 import datetime
 import pandas as pd
 import numpy as np
-import statsmodels.formula.api as smf
-#import scipy.stats as scipystats
 import statsmodels.api as sm
-import statsmodels.stats.stattools as stools
-import statsmodels.stats as stats 
-from statsmodels.graphics.regressionplots import *
+import statsmodels.formula.api as smf
 import matplotlib.pyplot as plt
 #import seaborn as sns
 
@@ -17,64 +13,106 @@ FIGURES_DIR = os.path.join(BASE_DIR, "figures")
 timestamp = datetime.datetime.now()
 
 data = os.path.join(DATA_DIR, 'data_file.csv')
-print('Generating regression statistics...')
 #pandas
 df = pd.read_csv(data)
-#print(df.describe())
-#print(df.iloc[:, 0])
-#print(df.head(n=10))
-#df.dropna(axis = 0, how = 'any') # To drop rows with any empty cells
-#df.drop_duplicates()
+print("Dataframe Info:")
+print(df.info())
+df.dropna(axis=0, how='any') # To drop rows with any empty cells
+df.drop_duplicates()
+#Summary information with descriptive statistics like count, mean, stdev, and the five number summary.
+print("Descriptive Statistics Summary:")
+print(df.describe())
+print("Data example (10 first rows):")
+print(df.head(10))
 
-
-'''
-Simple Linear Regression Model (with one numeric variable) - using statsmodels module.
-'''
-lrm = sm.OLS.from_formula(formula= "{} ~ {}".format(df.columns[0], df.columns[1]), data= df).fit()
+print('Generating linear regression models statistics...')
+"""
+Simple Linear Regression Model (with one numeric variable) - Using statsmodels module.
+"""
+#Using data columns 0 and 1 as the targeted and predictor variables (change formula if needed)
+lrm = smf.ols(formula="{} ~ {}".format(df.columns[0], df.columns[1]), data= df).fit()
 #print(lrm.summary()) # these are the results
+#print(lrm.params) #numpy array
 
 #figure with scatterplot
 lrm_plot = plt
 lrm_plot.style.use('ggplot')
-lrm_plot.rcParams['figure.figsize'] = (10, 6)
+lrm_plot.figure(figsize=(10,6))
 lrm_plot.scatter(df.iloc[:, 1], df.iloc[:, 0], c = 'g')
 lrm_plot.plot(df.iloc[:, 1], lrm.params[0] + lrm.params[1] * df.iloc[:, 1])
 lrm_plot.xlabel("{}".format(df.columns[1]).replace("_", " ").title())
 lrm_plot.ylabel("{}".format(df.columns[0]).replace("_", " ").title())
 lrm_plot.title("{} vs. {}".format(df.columns[1].replace("_", " ").title(), df.columns[0].replace("_", " ").title()))
-lrm_plot.savefig(os.path.join(FIGURES_DIR, "linear-regression-plot__predictor_{}__{}.png".format(df.columns[1], timestamp.strftime("%Y-%m-%d"))))
+lrm_plot.savefig(os.path.join(FIGURES_DIR, "simple-linear-regre-plot__predictor_{}__{}.png".format(df.columns[1], timestamp.strftime("%Y-%m-%d"))))
 #lrm_plot.show()
+lrm_plot.clf()
 lrm_plot.close()
 
 #figure with results summary
 lrm_fig = plt
-lrm_fig.rcParams['figure.figsize'] = (8, 5)
+lrm_fig.figure(figsize=(8,5))
 lrm_fig.text(0.01, 0.05, str(lrm.summary()), {'fontsize': 10}, fontproperties = 'monospace')
 lrm_fig.axis('off')
 lrm_fig.tight_layout()
-lrm_fig.savefig(os.path.join(FIGURES_DIR, "linear-regression-results__predictor_{}__{}.png".format(df.columns[1], timestamp.strftime("%Y-%m-%d"))))
+lrm_fig.savefig(os.path.join(FIGURES_DIR, "simple-linear-regr-results__predictor_{}__{}.png".format(df.columns[1], timestamp.strftime("%Y-%m-%d"))))
 #lrm_fig.show()
+lrm_fig.clf()
 lrm_fig.close()
+print('Simple linear regression model done')
 
 
-'''
-Multiple Linear Regression Model (with several numeric variables) - using statsmodels module.
-More predictor variables can be added in the next formula if a linear relationship 
-between the targeted variable and a potential predictor variable is significant (P-value <= 0.05).
-'''
-lrm_multiple = sm.OLS.from_formula(formula= "{} ~ {} + {}".format(df.columns[0], df.columns[1], df.columns[2]), data= df).fit()
+"""
+Multiple Linear Regression Model (with several numeric variables) - Using statsmodels module.
+More predictor variables can be added in the formula if a linear relationship 
+between the target variable and a potential predictor variable is significant (P-value <= 0.05).
+
+To do: 
+Check first correlation of each predictor variable with the target variable to add it or not to the formula.
+"""
+#Using data columns 0, 1, 2, as the targeted and predictor variables correspondingly (change formula if needed)
+predictor_vars = "{} + {}".format(df.columns[1], df.columns[2])
+lrm_multiple = smf.ols(formula=df.columns[0] + "~" + predictor_vars, data= df).fit()
 #print(lrm_multiple.summary()) # these are the results
+#print(lrm_multiple.params)
 
 #figure with results summary
 mul_lrm_fig = plt
-mul_lrm_fig.rcParams['figure.figsize'] = (8, 5)
+mul_lrm_fig.figure(figsize=(9,6))
 mul_lrm_fig.text(0.01, 0.05, str(lrm_multiple.summary()), {'fontsize': 10}, fontproperties = 'monospace')
 mul_lrm_fig.axis('off')
 mul_lrm_fig.tight_layout()
-fname_mul = "multiple-linear-reg-results__{}.png".format(timestamp.strftime("%Y-%m-%d"))
+fname_mul = "multiple-linear-regr-results__{}.png".format(timestamp.strftime("%Y-%m-%d"))
 to_save_mul = os.path.join(FIGURES_DIR, fname_mul)
-lrm_fig.savefig(to_save_mul)
-#lrm_fig.show()
+mul_lrm_fig.savefig(to_save_mul)
+#mul_lrm_fig.show()
+mul_lrm_fig.clf()
 mul_lrm_fig.close()
+print('Multiple linear regression model done')
 
-print('Results correctly saved in the figures folder')
+
+"""
+Multiple Linear Regression Model (including one categorical variable) - Using statsmodels module.
+Statsmodel automatically does one-hot encoding of the categorical variables (creating dummy variables with 0/1 values )
+"""
+#Using data column 0 as target var; 1 and 2, as numerical predictor vars; and 3 as categorical predictor var
+#C() operator treats explicitly a variable as categorical (e.g. if it had been numeric)
+predictor_vars = "{} + {} + C({})".format(df.columns[1], df.columns[2], df.columns[3])
+lrm_mult_with_cate = smf.ols(formula=df.columns[0] + "~" + predictor_vars, data= df).fit()
+#print(lrm_multiple_with_cat.summary()) # these are the results
+#print(lrm_multiple_with_cat.params) #regression params
+
+#figure with results summary
+mc_lrm_fig = plt
+mc_lrm_fig.figure(figsize=(9,6))
+mc_lrm_fig.text(0.01, 0.05, str(lrm_mult_with_cate.summary()), {'fontsize': 10}, fontproperties = 'monospace')
+mc_lrm_fig.axis('off')
+mc_lrm_fig.tight_layout()
+fname_mc = "multiple-linear-regr-w-categorical-results__{}.png".format(timestamp.strftime("%Y-%m-%d"))
+to_save_mc = os.path.join(FIGURES_DIR, fname_mc)
+mc_lrm_fig.savefig(to_save_mc)
+#mul_lrm_fig.show()
+mc_lrm_fig.clf()
+mc_lrm_fig.close()
+print('Multiple linear regression model with categorical vars done')
+
+print('Models results correctly saved in the figures folder')

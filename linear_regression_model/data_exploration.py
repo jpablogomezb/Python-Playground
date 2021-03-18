@@ -2,12 +2,9 @@ import os
 import datetime, random, string
 import pandas as pd
 import numpy as np
-import statsmodels.formula.api as smf
-import scipy.stats as scipystats
 import statsmodels.api as sm
-import statsmodels.stats.stattools as stools
-import statsmodels.stats as stats 
-from statsmodels.graphics.regressionplots import *
+#import statsmodels.formula.api as smf
+import scipy.stats as scipystats
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -24,11 +21,17 @@ print(df.info())
 #Summary information with descriptive statistics like count, mean, stdev, and the five number summary.
 #print(df.describe)
 
-def df_describe_to_img(dataframe, dir_to_save=None, df_fname=None):    
-    '''
-    Crates an image file with descriptive statistics summary from a dataframe (df).
-    Requires the directory where to save the image. Filename is optional.
-    '''
+def descriptive_stats_to_img(df, dir_to_save=None, df_fname=None):    
+    """Create an image file with descriptive statistics summary from a dataframe.
+
+    Parameters
+    ----------
+    df: pandas DataFrame
+    dir_to_save: str or path object 
+            directory to save the image
+    df_fname: str
+            Name to save the image (optional)
+    """
     if dir_to_save == None:
         raise Exception("Please provide a str, path object for the directory to save the image")
     figures_dir = dir_to_save
@@ -52,20 +55,26 @@ def df_describe_to_img(dataframe, dir_to_save=None, df_fname=None):
         desc_img.clf()
         desc_img.close()
         saved = True
-        print("Descriptive statitics of saved correctly: {}".format(f_name))
+        print("Descriptive statitics of {}...".format(os.path.basename(data_file)))
     except:
         saved = False
     return saved
 
-df_describe_to_img(df, FIGURES_DIR)
+descriptive_stats_to_img(df, FIGURES_DIR)
 
-def df_explore_variables_to_img(dataframe, dir_to_save=None):
-    '''
-    Using each numeric variable in data:
-    Creates image files for visualizing univariate histogram and density plots, and box plots.
-    Creates a correlation matrix image among variables
-    Creates a plot pairwise relationship using scatterplots for each pairing of the variables.
-    '''
+def explore_numeric_vars_to_img(df, dir_to_save=None):
+    """ Using each numeric variable in data:
+    Create image files for visualizing univariate histogram and density plots, and box plots.
+    Create a correlation matrix image among variables
+    Create a plot pairwise relationship using scatterplots for each pairing of the variables.
+    
+    Parameters
+    ----------
+    df: pandas DataFrame
+    dir_to_save: str or path object 
+            directory to save the image
+    """
+
     if dir_to_save == None:
         raise Exception("Please provide a str, path object for the directory to save the figures")
     figures_dir = dir_to_save
@@ -77,7 +86,7 @@ def df_explore_variables_to_img(dataframe, dir_to_save=None):
                 #print(var_data)
                 plt.style.use('ggplot')
                 plt.figure(figsize=(8,6))
-                plt.hist(var_data, density=1, color = 'g', alpha = 0.4, edgecolor = 'black')
+                plt.hist(var_data, density=True, color = 'g',  label='Histogram from values', alpha = 0.4, edgecolor = 'black')
                 #sns.distplot(df.iloc[:,i], hist=True, kde=True, bins=int(10), color = 'green', hist_kws={'edgecolor':'black'})
                 plt.title("Density Plot and Histogram for {}".format(df.columns[i].replace("_", " ").title()))
                 plt.xlabel("{}".format(df.columns[i]).replace("_", " ").title())
@@ -103,10 +112,11 @@ def df_explore_variables_to_img(dataframe, dir_to_save=None):
                 #plt.show()
                 plt.clf()
                 plt.close()
-            except:
+            except Exception as e:
+                print(e)
                 print("There was a problem generating the plots for variable: {}".format(df.columns[i]))
 
-        # check correlation among variables
+        #check correlation among variables
         print("Correlation Matrix of {}...".format(os.path.basename(data_file)))
         corrMatrix = df.corr()
         #print(corrMatrix)
@@ -127,9 +137,11 @@ def df_explore_variables_to_img(dataframe, dir_to_save=None):
         #plt.show()
         plt.clf()
         plt.close()
-        
+
         return True
-    except:
+
+    except Exception as e:
+        print(e)
         return False
 
-df_explore_variables_to_img(df, FIGURES_DIR)
+explore_numeric_vars_to_img(df, FIGURES_DIR)
