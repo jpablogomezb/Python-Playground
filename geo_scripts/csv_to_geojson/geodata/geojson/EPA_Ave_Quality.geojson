@@ -1,0 +1,645 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 8.68104166666667,
+        "PM10_AVE": 13.7655,
+        "SO2_AVE": 0.0,
+        "O3_AVE": 0.0,
+        "NO2_AVE": 0.0,
+        "CO_AVE": 0.0,
+        "AREA": "Finglas",
+        "City": "Dublin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3052,
+          53.3903
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 7.73696465696466,
+        "PM10_AVE": 11.5376299376299,
+        "SO2_AVE": 0.0,
+        "O3_AVE": 61.5594431554524,
+        "NO2_AVE": 0.0,
+        "CO_AVE": 0.0,
+        "AREA": "Clonskeagh",
+        "City": "Dublin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2353,
+          53.3118
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 7.61586111111111,
+        "PM10_AVE": 12.2518472222222,
+        "SO2_AVE": 0.0,
+        "O3_AVE": 0.0,
+        "NO2_AVE": 0.0,
+        "CO_AVE": 0.0,
+        "AREA": "PhoenixPark",
+        "City": "Dublin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3481,
+          53.3646
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 9.28266666666667,
+        "PM10_AVE": 15.8051527777778,
+        "SO2_AVE": 0.368091922005571,
+        "O3_AVE": 0.0,
+        "NO2_AVE": 19.8301112656467,
+        "CO_AVE": 0.0,
+        "AREA": "DublinPort",
+        "City": "Dublin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2038,
+          53.3516
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 8.29765277777778,
+        "PM10_AVE": 13.3460138888889,
+        "SO2_AVE": 0.0,
+        "O3_AVE": 0.0,
+        "NO2_AVE": 0.0,
+        "CO_AVE": 0.0,
+        "AREA": "Marino",
+        "City": "Dublin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2279,
+          53.3681
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 9.11815277777778,
+        "PM10_AVE": 13.8957916666667,
+        "SO2_AVE": 0.0,
+        "O3_AVE": 0.0,
+        "NO2_AVE": 31.9912638888889,
+        "CO_AVE": 0.0,
+        "AREA": "StJohnsRoad",
+        "City": "Dublin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2946,
+          53.3458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 8.39673611111111,
+        "PM10_AVE": 16.8080277777778,
+        "SO2_AVE": 0.0,
+        "O3_AVE": 0.0,
+        "NO2_AVE": 16.6326666666667,
+        "CO_AVE": 0.0,
+        "AREA": "DavittRoad",
+        "City": "Dublin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.309,
+          53.3363
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 8.537,
+        "PM10_AVE": 13.6918333333333,
+        "SO2_AVE": 0.0,
+        "O3_AVE": 0.0,
+        "NO2_AVE": 6.51541029207232,
+        "CO_AVE": 0.0,
+        "AREA": "Ballyfermot",
+        "City": "Dublin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3517,
+          53.3402
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 8.07879166666667,
+        "PM10_AVE": 13.2641666666667,
+        "SO2_AVE": 0.0,
+        "O3_AVE": 0.0,
+        "NO2_AVE": 0.0,
+        "CO_AVE": 0.0,
+        "AREA": "stAnnesPark",
+        "City": "Dublin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1794,
+          53.3729
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 8.41273611111111,
+        "PM10_AVE": 17.0813333333333,
+        "SO2_AVE": 2.57238888888889,
+        "O3_AVE": 0.0,
+        "NO2_AVE": 25.2293888888889,
+        "CO_AVE": 0.0,
+        "AREA": "Ringsend",
+        "City": "Dublin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2141,
+          53.3419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 9.09792665726375,
+        "PM10_AVE": 16.1085190409027,
+        "SO2_AVE": 0.0,
+        "O3_AVE": 39.1611565585331,
+        "NO2_AVE": 36.3144209039548,
+        "CO_AVE": 0.0,
+        "AREA": "PearseStreet",
+        "City": "Dublin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2543,
+          53.3451
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 8.735625,
+        "PM10_AVE": 13.5542916666667,
+        "SO2_AVE": 0.0,
+        "O3_AVE": 0.0,
+        "NO2_AVE": 7.73549511854951,
+        "CO_AVE": 0.0,
+        "AREA": "DunLaoghaire",
+        "City": "Dublin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.132,
+          53.286
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 6.65007797270955,
+        "PM10_AVE": 10.5318713450292,
+        "SO2_AVE": 1.07479166666667,
+        "O3_AVE": 50.864,
+        "NO2_AVE": 17.9884472934473,
+        "CO_AVE": 0.0,
+        "AREA": "Rathmines",
+        "City": "Dublin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2672,
+          53.322
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 0.0,
+        "PM10_AVE": 0.0,
+        "SO2_AVE": 0.588136300417246,
+        "O3_AVE": 0.0,
+        "NO2_AVE": 11.8761057023644,
+        "CO_AVE": 0.193805555555556,
+        "AREA": "WineTavernSt",
+        "City": "Dublin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2716,
+          53.3442
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 0.0,
+        "PM10_AVE": 0.0,
+        "SO2_AVE": 0.0,
+        "O3_AVE": 0.0,
+        "NO2_AVE": 10.2948611111111,
+        "CO_AVE": -0.58,
+        "AREA": "SouthLinkRoad",
+        "City": "Cork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4649,
+          51.8785
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 9.012,
+        "PM10_AVE": 0.0,
+        "SO2_AVE": 0.0,
+        "O3_AVE": 0.0,
+        "NO2_AVE": 0.0,
+        "CO_AVE": 0.0,
+        "AREA": "Carrigaline",
+        "City": "Cork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.3875,
+          51.8153
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 0.0,
+        "PM10_AVE": 12.2315988779804,
+        "SO2_AVE": 0.0,
+        "O3_AVE": 0.0,
+        "NO2_AVE": 0.0,
+        "CO_AVE": 0.0,
+        "AREA": "CorkAirport",
+        "City": "Cork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4895,
+          51.8519
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 0.0,
+        "PM10_AVE": 0.0,
+        "SO2_AVE": 3.92748611111111,
+        "O3_AVE": 0.0,
+        "NO2_AVE": 0.0,
+        "CO_AVE": 0.0,
+        "AREA": "CorkHarbour",
+        "City": "Cork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2974,
+          51.8495
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 7.40318941504178,
+        "PM10_AVE": 12.5655153203343,
+        "SO2_AVE": 0.0,
+        "O3_AVE": 0.0,
+        "NO2_AVE": 0.0,
+        "CO_AVE": 0.0,
+        "AREA": "HeathertonPark",
+        "City": "Cork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4571,
+          51.8819
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 7.82323611111111,
+        "PM10_AVE": 12.8167916666667,
+        "SO2_AVE": 0.0,
+        "O3_AVE": 0.0,
+        "NO2_AVE": 0.0,
+        "CO_AVE": 0.0,
+        "AREA": "CobhCarrignafoy",
+        "City": "Cork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2878,
+          51.8551
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 3.47992700729927,
+        "PM10_AVE": 0.0,
+        "SO2_AVE": 0.0,
+        "O3_AVE": 48.1948888888889,
+        "NO2_AVE": 6.92176388888889,
+        "CO_AVE": 0.0,
+        "AREA": "UniversityCollegeCork",
+        "City": "Cork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4863,
+          51.9
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 16.0989175257732,
+        "PM10_AVE": 32.4280412371134,
+        "SO2_AVE": 0.0,
+        "O3_AVE": 274.922124542124,
+        "NO2_AVE": 17.3585694444444,
+        "CO_AVE": 0.0,
+        "AREA": "CorkLowerGlanmireRoad",
+        "City": "Cork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4621,
+          51.9017
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 7.71420833333333,
+        "PM10_AVE": 13.6861388888889,
+        "SO2_AVE": 0.0,
+        "O3_AVE": 42.7400646551724,
+        "NO2_AVE": 0.0,
+        "CO_AVE": 0.0,
+        "AREA": "Bray",
+        "City": "Bray"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.122,
+          53.1873
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 6.66808333333333,
+        "PM10_AVE": 12.4890972222222,
+        "SO2_AVE": 0.0,
+        "O3_AVE": 0.0,
+        "NO2_AVE": 12.3951,
+        "CO_AVE": 0.0,
+        "AREA": "Briarhill",
+        "City": "Galway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0485,
+          53.274
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 0.0,
+        "PM10_AVE": 0.0,
+        "SO2_AVE": 0.0,
+        "O3_AVE": 0.0,
+        "NO2_AVE": 16.6837638888889,
+        "CO_AVE": 0.0,
+        "AREA": "EyreSquare",
+        "City": "Galway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0485,
+          53.274
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 8.57797768479777,
+        "PM10_AVE": 15.8533193863319,
+        "SO2_AVE": 6.7568479776848,
+        "O3_AVE": 51.7773146853147,
+        "NO2_AVE": 21.6116480446927,
+        "CO_AVE": 0.206005586592179,
+        "AREA": "DublinAirport",
+        "City": "Swords"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2391,
+          53.4261
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 0.0,
+        "PM10_AVE": 0.0,
+        "SO2_AVE": 0.0,
+        "O3_AVE": 62.0900277777778,
+        "NO2_AVE": 8.99670833333333,
+        "CO_AVE": 0.0,
+        "AREA": "Swords",
+        "City": "Swords"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2222,
+          53.4631
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 7.27170833333333,
+        "PM10_AVE": 12.2889305555556,
+        "SO2_AVE": 0.0,
+        "O3_AVE": 0.0,
+        "NO2_AVE": 15.098125,
+        "CO_AVE": 0.0,
+        "AREA": "Tallaght",
+        "City": "Leixlip"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3589,
+          53.2807
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 8.5540923566879,
+        "PM10_AVE": 14.5775796178344,
+        "SO2_AVE": 0.0,
+        "O3_AVE": 0.0,
+        "NO2_AVE": 18.9746892655367,
+        "CO_AVE": 0.0,
+        "AREA": "Lucan",
+        "City": "Leixlip"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4503,
+          53.3491
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 0.0,
+        "PM10_AVE": 13.0776911764706,
+        "SO2_AVE": 0.0,
+        "O3_AVE": 0.0,
+        "NO2_AVE": 0.0,
+        "CO_AVE": 0.0,
+        "AREA": "Leixlip",
+        "City": "Leixlip"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4867,
+          53.3719
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 8.967875,
+        "PM10_AVE": 16.5572222222222,
+        "SO2_AVE": 0.0,
+        "O3_AVE": 0.0,
+        "NO2_AVE": 30.8582916666667,
+        "CO_AVE": 0.0,
+        "AREA": "Blanchardstown",
+        "City": "Leixlip"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3692,
+          53.3854
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PM25_AVE": 7.88508333333333,
+        "PM10_AVE": 13.5562777777778,
+        "SO2_AVE": 0.0,
+        "O3_AVE": 0.0,
+        "NO2_AVE": 0.0,
+        "CO_AVE": 0.0,
+        "AREA": "GreyStones",
+        "City": "Greystones"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.122,
+          53.1873
+        ]
+      }
+    }
+  ]
+}
